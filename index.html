@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Ulang Tahun Mbak</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+</head>
+<body 
+style="
+background-image: url(https://images.unsplash.com/photo-1529244927325-b3ef2247b9fb?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+"
+ class="flex justify-center h-screen items-center"
+>
+<div 
+class="bg-white border px-10 py-5 border-4 border-pink-300 shadow-lg shadow-black-600 rounded-xl text-center animate__animated animate__backInDown m-8 w-80"
+id="kartu"
+>
+    <h1 class="text-xl font-bold">HAPPY BIRTHDAY</h1>
+    <h1 class="text-xl text-black-500 animate__animated animate__bounceIn">Yang Ke-31</h1>
+    <h1 class="text-4xl text-red-400 font-bold m-2 animate__animated animate__pulse animate__infinite">Ika Fajar Wijayanti
+</h1>
+
+    <button class="p-2 bg-pink-500 text-white rounded mt-8 hover:bg-pink-600 transition aese-in w-full animate__animated animate__delay-1s animate__tada" onclick="ubahKartu()"
+    >
+    TEKAN
+</button>
+<div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+    <script>
+confetti({
+  particleCount: 100,
+  spread: 70,
+  origin: { y: 0.6 },
+});
+let kartu = document.getElementById('kartu')
+function ubahKartu() {
+ kartu.innerHTML = `    <h1 class="font-semibold text-wrap animate__animated animate__bounceIn">
+        "Selamat ulang tahun, Mbak Ika. Semoga segala impian dan harapan mbak ika tercapai, Semoga mbak ika selalu diberikan kesehatan dan selalu diberikan kelancaran rezeki serta, keberkahan dalam setiap langkah hidupmu(Aamiin)."
+        
+</h1>
+<h2 class="mt-4 animate__animated animate__fadeIn">
+    - Dari : Ahmad (Adek) -
+</h2>
+<button class="p-2 bg-pink-500 text-white rounded mt-8 hover:bg-pink-600 transition aese-in w-full animate__animated animate__delay-1s 
+animate__tada"
+onclick="refresh()"
+>
+TUTUP
+</button> 
+`;
+
+}
+ function refresh() {
+    location.reload();
+}
+    </script>
+</html>
